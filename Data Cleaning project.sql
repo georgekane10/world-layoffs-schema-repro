@@ -6,7 +6,7 @@ FROM layoffs
 
 
 -- 1. Remove duplicates
--- 2. Standardize the data
+-- 2. Standardise the data
 -- 3. Null values or blank values
 -- 4. Remove Any columns or rows
 
@@ -46,11 +46,6 @@ SELECT *
 FROM layoffs_staging
 WHERE company = 'Casper'
 ;
-
-
-SELECT *
-FROM layoffs_staging
-WHERE company = 'Casper';
 
 
 
