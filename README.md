@@ -29,6 +29,8 @@ In the data there were several nulls in important columns such as industry. I us
 from the same table. By aliasing layoffs_staging5 as two seperate tables (1 & 2), I joined them on the company and location. Having the WHERE clause where table 1 industry had a blank or null, and table 2 industry was populated, this allowed me to identify rows where the industry was missing and fill them using matching
 records where the industry was already populated. Now i was able to update the missing or null industry values with its correct value using existing data from the rest of the dataset.
 
+#### Removing any columns or rows
+Finally the last thing I needed to do was remove the row number from layoffs_staging5 we added in to remove duplicates, as it would be unnecessary for the exploratory data analysis.
 
 
 
