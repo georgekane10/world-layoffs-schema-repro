@@ -22,5 +22,19 @@ data but also an additional row number column. Finally, I deleted any row that h
 To standardise the data, the first thing I did was remove any hidden spaces that could cause grouping errors.
 I applied the TRIM() function to remove the spaces. Next, I fixed inconsistencies in the data. For example, changing 'cryptocurrency' to just 'crypto'.
 I also identified a specific error in the country column where some records for 'United States' had a trailing full stop that would interfere with grouping.
+Finally, since the date was as a text data type, we used the STR_TO_DATE() function to change it to a date data type.
 
-####
+#### Removing Nulls or Blanks
+In the data there were several nulls in important columns such as industry. I used a query that populated a null or a blank value using existing data 
+from the same table. By aliasing layoffs_staging5 as two seperate tables (1 & 2), I joined them on the company and location. Having the WHERE clause where table 1 industry had a blank or null, and table 2 industry was populated, this allowed me to identify rows where the industry was missing and fill them using matching
+records where the industry was already populated. Now i was able to update the missing or null industry values with its correct value using existing data from the rest of the dataset.
+
+
+
+
+
+
+
+
+
+
